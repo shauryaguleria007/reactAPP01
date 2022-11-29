@@ -11,9 +11,12 @@ const SearchForm = () => {
   const newCocktails = () => {
     setSearchTerms(searchValue.current.value);
   };
+  const handelSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <section className="section search">
-      <form action="submit " className="search-form">
+      <form action="submit " className="search-form" onSubmit={handelSubmit}>
         <div className="form-control">
           <label htmlFor="name ">Search your favourite cocktail</label>
           <input
